@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import './App.css';
-import AppNavbar from './components/AppNavbar';
+import AppNavbar from './components/layout/AppNavbar';
 import HomePage from './components/HomePage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';

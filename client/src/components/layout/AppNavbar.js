@@ -5,8 +5,7 @@ import {
 	NavbarBrand,
 	NavbarToggler,
 	Collapse,
-	Nav,
-	NavItem
+	Nav
 } from 'reactstrap';
 
 export default class AppNavbar extends Component {
