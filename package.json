@@ -13,12 +13,14 @@
 	"license": "MIT",
 	"dependencies": {
 		"axios": "^0.19.0",
+		"bootstrap": "^4.3.1",
 		"config": "^3.1.0",
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
 		"express-graphql": "^0.8.0",
 		"graphql": "^14.3.1",
 		"path": "^0.12.7",
+		"react-router-dom": "^5.0.1",
 		"reactstrap": "^8.0.0"
 	},
 	"devDependencies": {
