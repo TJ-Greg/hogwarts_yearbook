@@ -5,7 +5,7 @@ import { Container } from 'reactstrap';
 import './App.css';
 import AppNavbar from './components/layout/AppNavbar';
 import HomePage from './components/HomePage';
-import { AllCharacters } from './components/AllCharacters';
+import AllCharacters from './components/AllCharacters';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 

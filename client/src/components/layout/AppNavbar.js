@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {
 	Navbar,
 	Container,
 	NavbarBrand,
 	NavbarToggler,
 	Collapse,
-	Nav
+	Nav,
+	NavItem,
+	NavLink
 } from 'reactstrap';
 
 export default class AppNavbar extends Component {
@@ -32,7 +34,13 @@ export default class AppNavbar extends Component {
 						<NavbarBrand href="/">Hogwarts Yearbook</NavbarBrand>
 						<NavbarToggler onClick={this.toggle} />
 						<Collapse isOpen={this.state.isOpen} navbar>
-							<Nav className="ml-auto" />
+							<Nav className="ml-auto" navbar>
+								<Fragment>
+									<NavItem>
+										<NavLink href="/all">All</NavLink>
+									</NavItem>
+								</Fragment>
+							</Nav>
 						</Collapse>
 					</Container>
 				</Navbar>
