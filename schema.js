@@ -17,6 +17,13 @@ const CharacterType = new GraphQLObjectType({
 	})
 });
 
+const GryffindorType = new GraphQLObjectType({
+	name: 'Gryffindor',
+	fields: () => ({
+		name: { type: GraphQLString }
+	})
+});
+
 const params = config.get('access');
 
 const RootQuery = new GraphQLObjectType({
@@ -27,6 +34,17 @@ const RootQuery = new GraphQLObjectType({
 			resolve(parent, args) {
 				return axios
 					.get('https://www.potterapi.com/v1/characters', params)
+					.then(res => res.data);
+			}
+		},
+		gryffindor: {
+			type: new GraphQLList(GryffindorType),
+			resolve(parent, args) {
+				return axios
+					.get(
+						'https://www.potterapi.com/v1/houses/5a05e2b252f721a3cf2ea33f',
+						params
+					)
 					.then(res => res.data);
 			}
 		}
